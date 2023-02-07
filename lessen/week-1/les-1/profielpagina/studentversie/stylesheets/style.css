@@ -68,6 +68,15 @@
     font-size: 14px;
 }
 
+.profile-content__company {
+    color: rgba(39, 140, 39, 0.96);
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+
+
+
 @media only screen and (min-width: 800px) {
 
     .page {
