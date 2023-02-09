@@ -4,18 +4,23 @@
     display: flex;
     flex-direction: column;
     font-family: Arial;
+    background-color: #598392;
 }
 
 .personalia {
-    background-color: #e7e8ec;
+    background-color: #AEC3B0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    
 }
 
 .profile {
-    background-color: #faf8f8;
+    background-color: #eff6e0;
     width: 100%;
 }
 
@@ -23,8 +28,15 @@
     border: 4px solid black;
     border-radius: 50%;
     margin: 15px 0px 15px 0px;
-    width:50%;
+    width:100%;
     animation: glow 3s ease alternate;
+    width:50%;
+    margin: 0 auto;
+}
+
+.personalia-content_image{
+    display: flex;
+    width: fit-content;
 }
 
 .profile-content {
@@ -43,6 +55,7 @@
 .profile-content__element {
     display: flex;
     flex-direction: column;
+
 }
 
 .profile-content__element--hidden-mobile {
