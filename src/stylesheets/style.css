@@ -1,9 +1,12 @@
 /*mobile version*/
 
+
 .page {
     display: flex;
     flex-direction: column;
     font-family: Arial;
+    position: absolute;
+    margin: 10px;
 }
 
 body{
@@ -232,4 +235,25 @@ body{
 
 .show{
     display: block;
+}
+
+/* navbar praktijken */
+
+.NavBar{
+    background-color: white;
+    display: flex;
+    position: relative;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.NavBar__item{
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
+    margin: 5px;
+    text-decoration: none;
+
 }
