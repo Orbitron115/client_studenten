@@ -1,11 +1,12 @@
 class GDPR {
 
     constructor() {
+        debugger;
         this.showStatus();
         this.showContent();
         this.bindEvents();
 
-        if(this.cookieStatus() !== 'accept') this.showGDPR();
+        if(this.cookieStatus() !== 'accept' && this.cookieStatus() !== 'reject') this.showGDPR();
     }
 
     bindEvents() {
@@ -17,8 +18,15 @@ class GDPR {
             this.hideGDPR();
         });
 
+        //student uitwerking:
 
-//student uitwerking
+        let buttonReject = document.querySelector('.gdpr-consent__button--reject');
+        buttonReject.addEventListener('click', () => {
+            this.cookieStatus('reject');
+            this.showStatus();
+            this.showContent();
+            this.hideGDPR();
+        });
 
 
     }
