@@ -26,7 +26,7 @@ body{
 }
 
 .profile {
-    background-color: #AEC3B0;
+    background-color: #447997;
     width: 100%;
 }
 
@@ -51,7 +51,7 @@ body{
 }
 
 .profile-content__category-title {
-    color: rgba(39, 140, 39, 0.96);
+    color: rgba(0, 0, 0, 0.96);
 }
 
 .profile-content__category--hidden-mobile {
@@ -82,17 +82,15 @@ body{
 }
 
 .profile-content__institute {
-    color: rgba(39, 140, 39, 0.96);
+    color: rgba(0, 0, 0, 0.96);
     margin-top: 0px;
     font-size: 14px;
 }
 
-/* zelf teogevoeged */
-
 /* profiel praktijken */
 
 .profile-content__company {
-    color: rgba(39, 140, 39, 0.96);
+    color: rgba(0, 0, 0, 0.96);
     margin-top: 0px;
     font-size: 14px;
 }
@@ -169,8 +167,11 @@ body{
         display: block;
     }
 
-    /* profiel dingen */
+    /* contact */
 
+    .contactPage{
+        flex-direction: row;
+    }
 
 }
 
@@ -245,6 +246,7 @@ body{
     margin: 10px;
     padding: 12px;
     border-radius: 10px;
+    background-color: #598392;
 }
 
 .NavBar__item{
@@ -256,3 +258,82 @@ body{
     text-decoration: none;
 
 }
+
+/* contact dingen */
+
+.contactPage{
+    display: flex;
+    flex-direction: row;
+    font-family: Arial;
+    margin: 10px;
+    position: absolute;
+    width: 100%;
+}
+
+/* form dingen */
+
+.contact-page-form-container{
+    background-color: #598392;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+}
+
+.contact-form__title{
+    font-size: 20px;
+}
+
+.contact-form__title-div{
+    margin: 10px;
+    padding: 5px;
+}
+
+.contact-name-container{
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.contact-form-description-label{
+    font-weight:600;
+}
+.contact-form-description-label-div{
+    margin: 10px;
+    padding: 5px;
+}
+
+
+.contact-form-description-input{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form-description-input-div{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+
+
+/* description dingen*/
+
+.contact-page-description-container{
+    background-color: rgb(16, 104, 131);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+}
+
