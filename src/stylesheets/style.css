@@ -22,12 +22,15 @@ body{
     justify-content: center;
     position: relative;
     text-align: center;
-    
+    border-radius: 20px;
+    margin: 5px;
 }
 
 .profile {
     background-color: #447997;
     width: 100%;
+    border-radius: 20px;
+    margin: 5px;
 }
 
 .person-logo {
@@ -129,7 +132,6 @@ body{
         flex-direction: row;
     }
 
-
     .person-name{
         order: -1;
     }
@@ -170,7 +172,7 @@ body{
     /* contact */
 
     .contactPage{
-        flex-direction: row;
+        flex-direction: column;
     }
 
 }
@@ -263,33 +265,38 @@ body{
 
 .contactPage{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: Arial;
-    margin: 10px;
-    position: absolute;
+    position: relative;
+    align-items: center;
     width: 100%;
+    margin: 15;
 }
 
 /* form dingen */
 
 .contact-page-form-container{
     background-color: #598392;
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     position: relative;
     text-align: center;
-    margin: 10px;
+    border-radius: 15px;
+    
 }
 
 .contact-form__title{
     font-size: 20px;
+    font-weight:600;
 }
 
 .contact-form__title-div{
     margin: 10px;
     padding: 5px;
+    width: 90%;
 }
 
 .contact-name-container{
@@ -315,12 +322,21 @@ body{
     background-color: white;
     width: 100%;
     height: 100%;
+    align-self: center;
 }
-
 .contact-form-description-input-div{
     width: 100%;
     height: 200px;
+    align-items: baseline;
     background-color: white;
+}
+
+
+.submit-button{
+    margin: 20px;
+    width: 50%;
+    height: 5%;
+    font-weight: 600;
 }
 
 
