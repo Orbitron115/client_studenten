@@ -1,3 +1,4 @@
+debugger;
 const form = document.querySelector("form");
 const email = document.getElementById("email");
 const subject = document.getElementById("subject");
@@ -9,12 +10,17 @@ form.addEventListener("submit", async (event) => {
     // Then we prevent the form from being sent by canceling the event
     event.preventDefault();
 
-    // if the email field is valid, we let the form submit
+     if (validateInput() == false){
+        return;
+     }
+
+     /*
     if (!email.validity.valid) {
         // If it isn't, we display an appropriate error message
         showError();
         return;
     }
+    */
     
     let response = await fetch('http://localhost:3000/form', {
         method: 'POST',
@@ -27,7 +33,9 @@ form.addEventListener("submit", async (event) => {
 
 });
 
-function showError() {
+function showErrorEmail() {
+
+    /*
     if (email.validity.valueMissing) {
         // If the field is empty,
         // display the following error message.
@@ -44,4 +52,57 @@ function showError() {
 
     // Set the styling appropriately
     emailError.className = "error active";
+    */
+   alert("gaat wahet mis bij mail");
+}
+
+function showErrorSubject() {
+    alert("gaat wahet mis bij subject");
+}
+
+function showErrorDescription() {
+    alert("gaat wahet mis bij message");
+}
+
+function validateInput(){
+
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var emailString = email.toString();
+
+    if (emailString.match(mailformat))
+        {
+            showErrorEmail();
+            return false;
+        }
+
+    if (subject.length >= 200)
+        {
+            showErrorSubject();
+            return false;
+        }
+
+    if (description.length >= 600 || (!validateText(description)))
+        {
+            showErrorDescription();
+            return false;
+        }
+    
+    return true;
+}
+
+function validateText(input){
+
+    /*
+    validate praktijeken
+
+    var letters = /^[A-Za-z]+$/;
+
+    if(inputtxt.value.match(letters))
+        {
+            return true;
+        }
+    
+    */
+
+     return true;
 }

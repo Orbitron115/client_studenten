@@ -1,17 +1,17 @@
-const express = require('express');
+import express, { json } from 'express';
 
 const app = express();
 const port = 3000;
-let cors = require('cors')
+import cors from 'cors';
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
-var bodyParser = require('body-parser');
+import { urlencoded, json as _json } from 'body-parser';
 
-app.use(bodyParser.urlencoded({
+app.use(urlencoded({
     extended: true
 }));
-app.use(bodyParser.json());
+app.use(_json());
 
 app.get('/', (req, res) => {
     res.send("Hallo wereld!");
