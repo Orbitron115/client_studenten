@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>CV Sandra van Gennep</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
     <script defer src="js/gdpr.js"></script>
+    <script defer src="server/server.js"></script>
+    <script defer src="js/app.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
@@ -27,7 +30,7 @@
         <div class="contact-page-form-container">
 
 
-            <form method="post">
+            <form novalidate action="http://localhost:3000/form">
 
                 <div class="contact-form__title-div">
                     <label class="contact-form__title">Required information</label>

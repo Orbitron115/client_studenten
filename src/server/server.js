@@ -22,9 +22,11 @@ app.post('/form', (req, res) => {
 
     console.log(req.body);
 
+    let subject = req.body.subject;
     let email = req.body.email;
+    let description = req.body.description;
 
-    res.json({email: email});
+    res.json({subject: subject, email : email, description: description});
     
 });
 
