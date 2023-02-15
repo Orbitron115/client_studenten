@@ -57,31 +57,29 @@ function showErrorEmail() {
 }
 
 function showErrorSubject() {
-    alert("gaat wahet mis bij subject");
+    alert("Teveel characters subject!");
 }
 
 function showErrorDescription() {
-    alert("gaat wahet mis bij message");
+    alert("Teveel characters description!");
 }
 
 function validateInput(){
 
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var emailString = email.toString();
-
-    if (emailString.match(mailformat))
+    // mail validatie gaat mis
+    if (!email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
         {
             showErrorEmail();
             return false;
         }
 
-    if (subject.length >= 200)
+    if (subject.value.length >= 200 || !(validateText(subject.value)))
         {
             showErrorSubject();
             return false;
         }
 
-    if (description.length >= 600 || (!validateText(description)))
+    if (description.value.length >= 600 || (!validateText(description.value)))
         {
             showErrorDescription();
             return false;
@@ -92,17 +90,13 @@ function validateInput(){
 
 function validateText(input){
 
-    /*
-    validate praktijeken
+    var letterNumber = /^[0-9 a-zA-Z]+$/;
 
-    var letters = /^[A-Za-z]+$/;
-
-    if(inputtxt.value.match(letters))
+    if(input.match(letterNumber))
         {
             return true;
         }
-    
-    */
 
-     return true;
+    return false;
+    
 }
