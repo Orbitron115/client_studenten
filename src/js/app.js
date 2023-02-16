@@ -34,16 +34,21 @@ form.addEventListener("submit", async (event) => {
 
 function showErrorEmail() {
 
-
-   alert("gaat wahet mis bij mail");
+   alert("Vul een geldig emailadres in!");
 }
 
-function showErrorSubject() {
-    alert("Teveel characters subject!");
+function showErrorSubject(bool) {
+    if (bool)
+        alert("Teveel charachters voor het onderwerp!")
+    else
+        alert("Alleen normale letters en spaties cijfers gebruiken in het onderwerp!")
 }
 
-function showErrorDescription() {
-    alert("Teveel characters description!");
+function showErrorDescription(bool) {
+    if (bool)
+        alert("Teveel charachters voor het bericht!")
+    else
+        alert("Alleen normale letters en spaties cijfers gebruiken in het bericht!")
 }
 
 function validateInput(){
@@ -55,17 +60,25 @@ function validateInput(){
             return false;
         }
 
-    if (subject.value.length >= 200 || !(validateText(subject.value)))
-        {
-            showErrorSubject();
-            return false;
-        }
+    if (subject.value.length >= 200){
+        showErrorSubject(true);
+        return false;
+    }
 
-    if (description.value.length >= 600 || (!validateText(description.value)))
-        {
-            showErrorDescription();
-            return false;
-        }
+    if (!validateText(subject.value)){
+        showErrorSubject(false);
+        return false;
+    }
+        
+    if (description.value.length >= 200){
+        showErrorSubject(true);
+        return false;
+    }
+
+    if (!validateText(description.value)){
+        showErrorSubject(false);
+        return false;
+    }
     
     return true;
 }
