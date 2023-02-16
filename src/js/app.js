@@ -2,6 +2,7 @@ debugger;
 const form = document.querySelector("form");
 const email = document.getElementById("email");
 const subject = document.getElementById("subject");
+const name = document.getElementById("name");
 const description = document.getElementById("description");
 const emailError = document.querySelector("#email + span.error");
 
@@ -10,6 +11,7 @@ form.addEventListener("submit", async (event) => {
     // Then we prevent the form from being sent by canceling the event
     event.preventDefault();
 
+    
      if (validateInput() == false){
         return;
      }
@@ -25,12 +27,12 @@ form.addEventListener("submit", async (event) => {
     let response = await fetch('http://localhost:3000/form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({email: email.value , subject: subject.value , description: description.value})
+        body: JSON.stringify({email: email.value , subject: subject.value , description: description.value, name: name.value})
     });
 
     let data = await response.json();
+    sendMail()
     alert(JSON.stringify(data))
-
 });
 
 function showErrorEmail() {
@@ -99,4 +101,23 @@ function validateText(input){
 
     return false;
     
+}
+
+function sendMail(){
+
+    Email.send({
+        SecureToken: "e178ef23-2ece-42fb-96af-efe220bf0ae4",
+        Username : "robin.contactit@gmail.com",
+        Password : "A09AA4B7BD4510155365548435CEC8193A8E",
+        To : email.value,
+        From : "robin.contactit@gmail.com",
+        Subject : "This is the subject",
+        Body : "<html> <h3>Name: " + name.value + "<h3><br><br>"+
+                     "<h4>Email:" + email.value + "</h4><br>"+
+                    "<h4>Subject:" + subject.value + "</h4><br>"+
+                    "<p>Message:" + description.value + "</p><br>"+
+                    "</html>",
+    }).then(
+      message => alert(message)
+    );
 }
