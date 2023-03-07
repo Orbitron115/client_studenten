@@ -21,11 +21,21 @@ const cirkelTemplate = {
     `
 }
 
+const vierkantTemplate = {
+    id: 'click-vierkant-tpl',
+    template: `
+    <div class="vierkant">
+        <p data-bind="vierkantClicks"></p>
+    </div> 
+    `
+}
+
 class Template{
 
     attachTemplates(){
         this.attachTemplate(appTemplate);
         this.attachTemplate(cirkelTemplate);
+        this.attachTemplate(vierkantTemplate);
     }
 
     attachTemplate(tplObject){

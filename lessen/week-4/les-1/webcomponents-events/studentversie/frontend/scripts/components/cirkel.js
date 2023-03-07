@@ -20,7 +20,7 @@ class Cirkel extends HTMLElement {
         this.shadowRoot.querySelector('div')
             .classList.add(this.getAttribute('color'));
     }
-
+    
     applyTemplate() {
         let template = document.getElementById(this.templateId);
         let clone = template.content.cloneNode(true);
