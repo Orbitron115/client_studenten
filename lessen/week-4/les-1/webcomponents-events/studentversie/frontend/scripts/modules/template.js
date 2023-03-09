@@ -7,6 +7,7 @@ const appTemplate = {
         <div class="cirkels">
             <click-cirkel id="cirkel-1" color="red">a</click-cirkel>
             <click-cirkel id="cirkel-2" color="blue">b</click-cirkel>
+            <click-vierkant id="vierkant-1" color="blue">b</click-vierkant>
         </div>
     </div> 
     `
