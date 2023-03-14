@@ -1,40 +1,51 @@
+const gpdr = (function () {
 
     const init = () => {
-        showStatus();
-        showContent();
-        bindEvents();
+        this.showStatus();
+        this.showContent();
+        this.bindEvents();
 
-        if(cookieStatus() !== 'accept') showGDPR();
+        if(this.cookieStatus() !== 'accept') this.showGDPR();
     }
 
     const bindEvents = () => {
         let buttonAccept = document.querySelector('.gdpr-consent__button--accept');
         buttonAccept.addEventListener('click', () => {
-            cookieStatus('accept');
-            showStatus();
-            showContent();
-            hideGDPR();
+            this.cookieStatus('accept');
+            this.showStatus();
+            this.showContent();
+            this.hideGDPR();
         });
 
 
-//student uitwerking
+        //#student-start
+        let buttonReject = document.querySelector('.gdpr-consent__button--reject');
+        buttonReject.addEventListener('click', () => {
+            this.cookieStatus('reject');
+            this.showStatus();
+            this.showContent();
+            this.hideGDPR();
+        });
+        //#student-end
 
 
     }
-
+    
     const showContent = () => {
-        resetContent();
-        const status = cookieStatus() == null ? 'not-chosen' : cookieStatus();
+        this.resetContent();
+        const status = this.cookieStatus() == null ? 'not-chosen' : this.cookieStatus();
         const element = document.querySelector(`.content-gdpr-${status}`);
         element.classList.add('show');
 
     }
 
-    const resetContent = () => {
+    const resetContent = () =>{
         const classes = [
             '.content-gdpr-accept',
 
-//student uitwerking
+            //#student-start
+            '.content-gdpr-reject',
+            //#student-end
 
             '.content-gdpr-not-chosen'];
 
@@ -46,30 +57,45 @@
 
     const showStatus = () => {
         document.getElementById('content-gpdr-consent-status').innerHTML =
-            cookieStatus() == null ? 'Niet gekozen' : cookieStatus();
+            this.cookieStatus() == null ? 'Niet gekozen' : this.cookieStatus();
     }
 
     const cookieStatus = (status) => {
         if (status) localStorage.setItem('gdpr-consent-choice', status);
 
-//student uitwerking
+        //#student-start
+        if(status) this.saveMetaData();
+        //#student-end
 
         return localStorage.getItem('gdpr-consent-choice');
     }
 
 
-//student uitwerking
+    //#student-start
+    const saveMetaData = () =>{
+        const date = new Date();
+        let metadata  = {
+            datum: `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`,
+            tijd: `${date.getHours()}:${date.getMinutes()}`
+        }
+        localStorage.setItem('gdpr-consent-metadata', JSON.stringify(metadata) );
+    }
 
+    //#student-end
 
     const hideGDPR = () => {
         document.querySelector(`.gdpr-consent`).classList.add('hide');
         document.querySelector(`.gdpr-consent`).classList.remove('show');
     }
 
-    const showGDPR = () => {
+    showGDPR = () => {
         document.querySelector(`.gdpr-consent`).classList.add('show');
     }
 
+    return{
+        init
+    }
 
-init();
+}());
 
+gpdr.init();
