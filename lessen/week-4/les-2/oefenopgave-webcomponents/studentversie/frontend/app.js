@@ -46,8 +46,14 @@ class App extends HTMLElement {
             Geef de knop een listener die alle 'click-cirkel' webcomponents selecteert.
             Gebruik voor het verwijderenelement.remove().
         `)
+        debugger;
 
-//student uitwerking
+        this.shadowRoot.getElementById("resetKnop").addEventListener('click', () => {
+            this.shadowRoot.querySelectorAll("click-cirkel").forEach( (element) => {
+                debugger;
+                element.remove();
+            })
+        });
 
     }
 
@@ -57,6 +63,12 @@ class App extends HTMLElement {
         maak een element: document.createElement...
         voeg het element toe aan de shadowroot: this.shadowRoot...
         `)
+        debugger;
+
+
+        
+        const  circleElem = document.createElement("click-cirkel");
+        this.shadowRoot.querySelector(".container").appendChild(circleElem);
 
 //student uitwerking
 

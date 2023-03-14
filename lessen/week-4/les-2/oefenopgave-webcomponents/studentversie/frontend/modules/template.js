@@ -4,7 +4,7 @@ const appTemplate = {
     template: `
     <div id="app" class="app">
         <h1>Blokken</h1>
-        <button>reset</button>
+        <button id="resetKnop">reset</button>
         <div class="container">
             <click-cirkel color=""></click-cirkel>
             
