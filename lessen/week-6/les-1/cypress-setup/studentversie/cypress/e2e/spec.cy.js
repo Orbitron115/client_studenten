@@ -11,3 +11,15 @@ describe('dom spec', () => {
         cy.contains('Hallo wereld')
     })
 })
+
+describe('Is de div aanwezig' , () => {
+    it('bevat een div element' , () => {
+        cy.visit(url);
+
+        cy.contains('[data-cy="troep"]');
+
+        cy.contains('[data-cy="troep"]').contains('[data-cy="pelem"]');
+
+        cy.get('[data-cy="pelem"]').should('have.value' , 'pannenkoek');
+    })
+})
