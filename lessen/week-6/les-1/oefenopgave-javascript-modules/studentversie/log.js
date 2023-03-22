@@ -1,19 +1,21 @@
 
 
-//student uitwerking
-//class Log {
+class Log{
 
-    info(message) {
+    info(message){
         console.info(message);
     }
 
-    debug(message) {
+    debug (message){
         console.log(message);
     }
 
-    error(message) {
+    error (message){
         console.error(message);
     }
-
 }
+
+const f = new Log();
+export {f}
+
 
