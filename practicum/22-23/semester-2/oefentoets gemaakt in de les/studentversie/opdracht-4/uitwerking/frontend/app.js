@@ -15,10 +15,10 @@ class App extends HTMLElement {
         this.applyTemplate();
         this.attachStyling();
 
-        // for(const p of ['melk', 'kaas', 'brood']){
-        //     const item = new BoodschappenItem(p);
-        //     this.shadowRoot.querySelector('ul').appendChild(item);
-        // }
+         for(const p of ['melk', 'kaas', 'brood']){
+             const item = new BoodschappenItem(p);
+             this.shadowRoot.querySelector('ul').appendChild(item);
+        }
 
 //student uitwerking
 
@@ -28,7 +28,8 @@ class App extends HTMLElement {
         let appTemplate = document.getElementById(this.templateId);
 
         //clone template an voeg toe aan shadowRoot
-//student uitwerking
+        this.shadowRoot.apppend(appTemplate.content.clondeNode())
+        //student uitwerking
 
     }
 

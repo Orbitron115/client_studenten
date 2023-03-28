@@ -16,8 +16,20 @@ export default class Boodschappen{
         this.data.push(boodschap);
     }
 
-    render(){
+    render(lijsten){
+
+        var dict = {}
         
+        lijsten.foreach(lijst => {
+
+            lijst.foreach(item => {
+
+                dict[item] = dict[item] + 1;
+            })
+            
+        })
+
+
     }
 
 }

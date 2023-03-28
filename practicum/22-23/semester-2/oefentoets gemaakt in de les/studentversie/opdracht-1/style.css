@@ -4,7 +4,7 @@
 
 ul{
     list-style-type: none;
-    width: 400px;
+    width: 100%;
 }
 
 ul li{
@@ -26,7 +26,7 @@ ul li:nth-child(1){
 }
 
 ul li span {
-
+    display: none;
     margin-right: 10px;
 
 }
@@ -41,10 +41,21 @@ ul li span {
 @media only screen and (min-width: 800px) {
 
     ul {
-        width: 100%;
+        width: 500px;
     }
 
     .rondje{
+        background-color: black;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: antiquewhite;
+        justify-content: center;
+        display: flex;
+        position: relative;
+    }
+
+    ul li span{
         background-color: black;
         border-radius: 50%;
         width: 20px;

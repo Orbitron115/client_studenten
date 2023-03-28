@@ -1,8 +1,8 @@
 export default class BoodschappenItem extends HTMLElement {
 
     shadowRoot;
-    //templateId = 'boodschappen-item-tpl';
-    //elementId = 'boodschappen-item';
+    templateId = 'boodschappen-item-tpl';
+    elementId = 'boodschappen-item';
 
 //student uitwerking
 
@@ -44,6 +44,9 @@ export default class BoodschappenItem extends HTMLElement {
         console.log('Click event in boodschappen-item.js nog niet ingeschakeld.');
         const self = this;
         this.addEventListener('click', () => {
+
+            self.sendEvent();
+            self.togglePickColor();
 //student uitwerking
         });
     }
@@ -52,7 +55,8 @@ export default class BoodschappenItem extends HTMLElement {
         this.state.picked = !this.state.picked;
 
         //tip: zet op het li element een attribuut 'data-color'.
-//student uitwerking
+        this.shadowRoot.querySelector(li)
+        //student uitwerking
     }
 
     sendEvent() {

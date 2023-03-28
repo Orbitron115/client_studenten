@@ -12,6 +12,9 @@ class App {
 
     async haalBoodschappenOp() {
 
+        let response2 = await fetch('http://localhost:3000/boodschappen');
+        const data2 = await response.json();
+
         let response = await fetch('http://localhost:3000/boodschappen', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }})
@@ -19,6 +22,7 @@ class App {
         
         let data = await response.json();
         this.boodschappen.data = data;
+        
         this.boodschappen.data.forEach((item)=> {
             let listItem = document.createElement("li" , item);
             listItem.innerHTML = item.toString();
