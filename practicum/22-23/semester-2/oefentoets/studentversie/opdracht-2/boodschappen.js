@@ -17,7 +17,7 @@ export default class Boodschappen{
     }
 
     render(){
-//student uitwerking
+        
     }
 
 }

@@ -4,7 +4,7 @@
 
 ul{
     list-style-type: none;
-    width: 300px;
+    width: 400px;
 }
 
 ul li{
@@ -12,11 +12,12 @@ ul li{
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid darkgray;
+    margin-right: 70px;
 }
 
 ul li:nth-child(odd){
 
-/*student uitwerking*/
+background-color: lightgrey;
 
 }
 
@@ -26,11 +27,33 @@ ul li:nth-child(1){
 
 ul li span {
 
-/*student uitwerking*/
+    margin-right: 10px;
 
+}
+
+.rondje{
+    display: none;
 }
 
 
 
-
 /*student uitwerking*/
+@media only screen and (min-width: 800px) {
+
+    ul {
+        width: 100%;
+    }
+
+    .rondje{
+        background-color: black;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: antiquewhite;
+        justify-content: center;
+        display: flex;
+        position: relative;
+    }
+
+
+}

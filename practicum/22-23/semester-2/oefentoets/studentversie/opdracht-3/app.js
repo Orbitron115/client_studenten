@@ -1,3 +1,5 @@
+import Boodschappen from "../opdracht-2/boodschappen";
+
 const lijsten = [
     ['melk', 'brood', 'eieren', 'kaas'],
     ['appels', 'peren', 'bananen', 'kiwi'],
@@ -10,11 +12,12 @@ const lijsten = [
 
 const SPA = (() => {
 
+
+
     return {
         init(lijsten) {
             //SPA.Boodschappen.init(lijsten);
 
-//student uitwerking
 
         }
     }
@@ -25,6 +28,7 @@ const SPA = (() => {
 
 SPA.init(lijsten);
 //tip, Array.flat. Voorbeeld: console.log(lijsten.flat(2));
+
 //SPA.Boodschappen.bereken();
 //student uitwerking
 
