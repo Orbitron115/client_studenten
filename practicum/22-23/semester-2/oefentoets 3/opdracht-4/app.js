@@ -3,18 +3,18 @@ const SPA = (() => {
         console.log(uitslag);
 
         //onderstaande code mag je aanpassen om aan het format in de opdracht te voldoen
-        // for (let l of uitslag) {
-        //     console.log(`${l.voornaam}, ${l.geslaagd ? "geslaagd" : "niet geslaagd"}`);
-        //     if (!l.geslaagd) {
-        //         console.log(`niet behaalde toetsen:`);
-        //         for (let r of Object.entries(l.resultaten)) {
-        //             if (r[1] < 5.5) {
-        //                 console.log(`${r[0]} \t ${r[1]}`);
-        //             }
-        //         }
-        //     }
-        //     console.log(``)
-        // }
+        for (let l of uitslag) {
+            console.log(`${l.voornaam}, ${l.geslaagd ? "geslaagd" : "niet geslaagd"}`);
+            if (!l.geslaagd) {
+                console.log(`niet behaalde toetsen:`);
+                for (let r of Object.entries(l.resultaten)) {
+                    if (r[1] < 5.5) {
+                        console.log(`${r[0]} \t ${r[1]}`);
+                    }
+                }
+            }
+            console.log(``)
+        }
 
 //student uitwerking
 
@@ -56,7 +56,53 @@ const SPA = (() => {
 //     result[l.leerlingNummer] = l;
 // }
 
-//student uitwerking
+SPA.SlagingsBerekening = (() => {
+
+    const _bereken = (leerlingen , toetsen) => {
+
+        //Hint sorteren:
+
+        
+
+        //integers
+        result.sort((a, b) => {
+            return b.voornaam - a.voornaam;
+        });
+
+        //Hint berekening:
+        //onderstaande code mag je gebruiken, je mag ook zelf een andere oplossing kiezen
+
+        //vakken
+        let vakken = new Set();
+        for (let t of toetsen) {
+            vakken.add(t.vak);
+        }
+
+        //leerlingen - vakken resultaten array
+        for (let l of leerlingen) {
+            l.resultaten = {};
+            for (let v of vakken) {
+                l.resultaten[v] = [];
+            }
+
+            result[l.leerlingNummer] = l;
+        }
+
+        //strings
+        result.sort((a, b) => {
+            return a.voornaam.localeCompare(b.voornaam);
+        });
+
+        return result;
+
+
+    };
+
+    return {
+        bereken : _bereken
+    }
+
+})();
 
 //Leerlingen en toetsen
 const leerlingen = [
