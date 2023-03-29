@@ -87,12 +87,8 @@ SPA.SlagingsBerekening = (() => {
 
             result[l.leerlingNummer] = l;
         }
-
-        //strings
-        result.sort((a, b) => {
-            return a.voornaam.localeCompare(b.voornaam);
-        });
-
+        //
+        for (let t of toetsen)
         return result;
 
 

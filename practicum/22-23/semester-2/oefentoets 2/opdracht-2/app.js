@@ -1,6 +1,15 @@
 class Webshop {
 
 
+    //#student-start
+    constructor(url) {
+        this.url = url;
+        this.data = null;
+    }
+
+    async haalBeschikbaarheidOp() {
+        this.data = await $.getJSON(this.url);
+    }
 //student uitwerking
 
 }
