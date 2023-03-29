@@ -1,0 +1,39 @@
+
+img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.score {
+    font-size: 20px;
+}
+
+.tegelDraaien{
+    /*#student-start*/
+    animation-name: draaien;
+    animation-duration: 3s;
+    animation-iteration-count : infinite;
+    /*#student-end*/
+}
+
+/*#student-start*/
+.tegel{
+    float: left;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    display: inline-block;
+}
+/*#student-end*/
+
+/*#student-start*/
+@keyframes draaien {
+    from {
+        -webkit-transform: rotate(0deg);
+    } to {
+          -webkit-transform: rotate(360deg);
+      }
+}
+/*#student-end*/
