@@ -5,10 +5,19 @@ class Webshop {
     constructor(url) {
         this.url = url;
         this.data = null;
+        this.haalBeschikbaarheidOp();
     }
 
     async haalBeschikbaarheidOp() {
         this.data = await $.getJSON(this.url);
+    }
+
+    async productAanwezigheidInWinkels() {
+        
+    }
+
+    async beschikbareProducten() {
+        
     }
 //student uitwerking
 

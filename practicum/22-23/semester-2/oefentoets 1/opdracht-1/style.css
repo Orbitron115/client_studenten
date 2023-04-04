@@ -1,0 +1,55 @@
+
+/*student uitwerking*/
+/*animatie rijden*/
+
+#opdracht-1{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 600px
+}
+
+.verkeerslicht{
+    width: 54px;
+    padding: 3px;
+    position: relative;
+    border: 1px solid #ccc
+}
+
+
+
+/*student uitwerking*/
+/*klasse licht*/
+
+
+.rood{
+    background-color: red;
+}
+
+.oranje{
+    background-color: orange;
+}
+
+.groen{
+    background-color: green;
+}
+
+.zwart{
+    background-color: black;
+}
+
+button{
+    margin-top: 40px;
+}
+
+img{
+    width: 150px;
+    position: fixed;
+    left: 30%;
+}
+
+.rijden{
+
+/*student uitwerking*/
+
+}
