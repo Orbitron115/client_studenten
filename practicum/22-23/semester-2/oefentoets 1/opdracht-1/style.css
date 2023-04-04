@@ -13,13 +13,21 @@
     width: 54px;
     padding: 3px;
     position: relative;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
+    height: 165px;
+    
 }
 
 
 
 /*student uitwerking*/
 /*klasse licht*/
+.licht{
+    height:  50px;
+    margin: 2px;
+    border-radius:  50%;
+
+}
 
 
 .rood{
@@ -50,6 +58,20 @@ img{
 
 .rijden{
 
-/*student uitwerking*/
+    animation-name: horizontaalRijden;
+    animation-duration: 3s;
+    animation-iteration-count : infinite;
 
+
+}
+
+/*#student-start*/
+@keyframes horizontaalRijden {
+    50% {
+        left: 90%;
+    }
+
+    100% {
+        left: 30%;
+    }
 }

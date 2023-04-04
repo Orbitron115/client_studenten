@@ -1,15 +1,13 @@
 let rijdenOfStoppen = function () {
-
-//student uitwerking
-
+    debugger;
+    $('#rijden').toggleClass('rijden');
 }
 
 //document ready
 $(() => {
 
-
-//student uitwerking
-
+    $('#rijdenBtn').on('click', () => {
+        rijdenOfStoppen();
+    });
 
 });
-
