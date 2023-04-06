@@ -83,6 +83,6 @@ export default class BoodschappenItem extends HTMLElement {
 
 }
 
-//customElements.define('boodschappen-item', BoodschappenItem);
+customElements.define('boodschappen-item', BoodschappenItem);
 
 export {BoodschappenItem};

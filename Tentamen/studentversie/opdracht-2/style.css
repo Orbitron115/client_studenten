@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
     font-family: Arial;
 }
 
 .blog__title {
     display: flex;
-    justify-content: center;
+    justify-content:center;
 }
 
 .blog__header {
@@ -22,9 +23,46 @@
     display: none;
 }
 
+.blog__footer{
+    display: none;
+}
+
 a {
     display: none;
     justify-content: flex-end;
 }
 
 /*student uitwerking*/
+
+@media only screen and (min-width: 800px) {
+
+    .blog__author {
+        display: flex;
+    }
+
+    .blog__footer{
+        display: flex;
+        justify-content: right;
+    }
+    
+    a{
+        margin: 10px;
+        display: block;
+        justify-content: right;
+        color: black;
+    }
+
+    .blog__body{
+        margin: 10px;
+    }
+    .blog {
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+    .blog__header {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+}

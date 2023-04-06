@@ -16,8 +16,10 @@ class SchaakBord extends HTMLElement {
     }
 
     applyTemplate() {
-        //voeg template toe.
-//student uitwerking
+        let template = document.getElementById(this.templateId);
+        let clone = template.content.cloneNode(true);
+
+        this.shadowRoot.appendChild(clone);
 
     }
 
@@ -52,13 +54,12 @@ class SchaakBord extends HTMLElement {
 
     removeToren() {
         // tip: ... forEach(n => n.childNodes.forEach(n => n.remove()) ...
-//student uitwerking
+        //student uitwerking
     }
 
 }
 
-//registreer component
-//student uitwerking
+customElements.define('schaak-bord-tpl', SchaakBord);
 
 
 export default SchaakBord;
