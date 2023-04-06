@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>opdracht 1 Webcomponents</title>
+    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+
+<section id="opdracht-5">
+
+
+    <schaak-app></schaak-app>
+
+
+</section>
+
+<template id="schaak-app-tpl">
+    <h1>Schaken</h1>
+
+    <schaak-bord></schaak-bord>
+
+</template>
+
+<template id="schaak-bord-tpl">
+    <div class="veld-collection">
+        <div class="veld wit" data-stuk='' data-veld="a1"></div>
+        <div class="veld zwart" data-stuk='toren' data-veld="a2"></div>
+        <div class="veld wit" data-stuk='' data-veld="a3"></div>
+        <div class="veld zwart" data-stuk='' data-veld="a4"></div>
+        <div class="veld wit" data-stuk='' data-veld="a5"></div>
+        <div class="veld zwart" data-stuk='' data-veld="a6"></div>
+        <div class="veld wit" data-stuk='' data-veld="a7"></div>
+        <div class="veld zwart" data-stuk='' data-veld="a8"></div>
+    </div>
+</template>
+
+
+</body>
+</html>
+

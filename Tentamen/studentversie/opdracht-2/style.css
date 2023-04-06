@@ -1,0 +1,30 @@
+#opdracht-2 {
+
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial;
+}
+
+.blog__title {
+    display: flex;
+    justify-content: center;
+}
+
+.blog__header {
+    background-color: #cccccc;
+}
+
+.blog__author {
+    display: none;
+}
+
+a {
+    display: none;
+    justify-content: flex-end;
+}
+
+/*student uitwerking*/
