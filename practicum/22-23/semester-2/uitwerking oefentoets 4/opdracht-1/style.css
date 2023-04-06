@@ -1,0 +1,59 @@
+#opdracht-1{
+    font-family: Arial;
+}
+
+ul{
+    list-style-type: none;
+    width: 300px;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
+}
+
+ul li:nth-child(odd){
+
+    /*#student-start*/
+    background-color: #f1f1f1;
+    /*#student-end*/
+
+}
+
+ul li:nth-child(1){
+    border-top: 1px solid darkgray;
+}
+
+ul li span {
+
+/*#student-start*/
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+/*#student-end*/
+
+}
+
+
+
+
+/*#student-start*/
+@media (min-width:500px) {
+
+    ul{
+        width: 500px;
+    }
+
+    ul li span{
+        display: flex;
+    }
+}
+/*#student-end*/
